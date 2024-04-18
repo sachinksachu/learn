@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CurrencyConverter from './pages/CurrecnyConverter'; // Assuming correct import path
+import Stopwatch from './pages/Stopwatch';
+import ContextProvider from './pages/ContextProvider';
+import Form from './pages/form/Form';
+import RouterExample from './pages/RouterExample';
+import Default from './pages/Default';
+import ListItems from './pages/pagination/ListItems';
+import ProductForm from './pages/form/ProductForm.js/form';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/route" element={<Default />} />
+        <Route exact path="/:productid?/:id?" element={<RouterExample />} />
+        <Route exact path="/currency" element={<CurrencyConverter />} />
+        <Route exact path="/stopwatch" element={<Stopwatch />} />
+        <Route exact path="/theme" element={<ContextProvider />} />
+        <Route exact path="/form" element={<Form />} />
+        <Route exact path="/products" element={<ListItems />} />
+        <Route exact path="/productform" element={<ProductForm />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
