@@ -9,19 +9,21 @@ import RouterExample from './pages/RouterExample';
 import Default from './pages/Default';
 import ListItems from './pages/pagination/ListItems';
 import ProductForm from './pages/form/ProductForm.js/form';
+import ParentForm from './pages/form/TestForm/ParentForm';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/route" element={<Default />} />
+        {/* <Route exact path="/route" element={<Default />} />
         <Route exact path="/:productid?/:id?" element={<RouterExample />} />
         <Route exact path="/currency" element={<CurrencyConverter />} />
         <Route exact path="/stopwatch" element={<Stopwatch />} />
         <Route exact path="/theme" element={<ContextProvider />} />
         <Route exact path="/form" element={<Form />} />
         <Route exact path="/products" element={<ListItems />} />
-        <Route exact path="/productform" element={<ProductForm />} />
+        <Route exact path="/productform" element={<ProductForm />} /> */}
+        <Route exact path="/parentform" element={<ParentForm />} />
       </Routes>
     </BrowserRouter>
   );
