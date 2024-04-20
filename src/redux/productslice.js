@@ -5,7 +5,7 @@ const initialState = { data: null, loading: true, error : false }
 export const getList = createAsyncThunk(
     'list/get',
     async () => {
-        const response = await fetch('https://fakestoreapi.com/products?limit=5');
+        const response = await fetch('https://fakestoreapi.com/products?limit=10');
         return await response.json();
       }
   )

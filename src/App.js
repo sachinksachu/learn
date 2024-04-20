@@ -15,14 +15,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route exact path="/route" element={<Default />} />
+        <Route exact path="/route" element={<Default />} />
         <Route exact path="/:productid?/:id?" element={<RouterExample />} />
         <Route exact path="/currency" element={<CurrencyConverter />} />
         <Route exact path="/stopwatch" element={<Stopwatch />} />
         <Route exact path="/theme" element={<ContextProvider />} />
         <Route exact path="/form" element={<Form />} />
         <Route exact path="/products" element={<ListItems />} />
-        <Route exact path="/productform" element={<ProductForm />} /> */}
+        <Route exact path="/productform" element={<ProductForm />} />
         <Route exact path="/parentform" element={<ParentForm />} />
       </Routes>
     </BrowserRouter>
