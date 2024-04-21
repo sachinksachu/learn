@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ChildForm1 from "./ChildForm1";
 import ChildForm2 from "./ChildForm2";
 import FormContext from "./FormContext";
@@ -15,6 +15,7 @@ const ParentForm = () => {
     setFields((prevField) => ({ ...prevField, [name]: value }))
   }
 
+  
   const onFormSubmit = (event) => {
     event.preventDefault();
     console.log("fields", fields)

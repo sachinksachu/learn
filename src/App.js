@@ -10,6 +10,7 @@ import Default from './pages/Default';
 import ListItems from './pages/pagination/ListItems';
 import ProductForm from './pages/form/ProductForm.js/form';
 import ParentForm from './pages/form/TestForm/ParentForm';
+import ChildWithError from './pages/error/ChildWithError';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/products" element={<ListItems />} />
         <Route exact path="/productform" element={<ProductForm />} />
         <Route exact path="/parentform" element={<ParentForm />} />
+        <Route exact path="/errorhandling" element={<ChildWithError />} />
       </Routes>
     </BrowserRouter>
   );
