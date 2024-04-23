@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CurrencyConverter from './pages/CurrecnyConverter'; // Assuming correct import path
 import Stopwatch from './pages/Stopwatch';
 import ContextProvider from './pages/ContextProvider';
-import Form from './pages/form/Form';
+import Form from './pages/form/customForm/Form';
 import RouterExample from './pages/RouterExample';
 import Default from './pages/Default';
 import ListItems from './pages/pagination/ListItems';
@@ -13,6 +13,7 @@ import ParentForm from './pages/form/TestForm/ParentForm';
 import ChildWithError from './pages/error/ChildWithError';
 import LazyParent from './pages/lazy/LazyParent';
 import ChildWrapper from './pages/hoc/childWrapper';
+import FormDuplicate from './pages/form/formDuplicate/FormDuplicate';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route exact path="/errorhandling" element={<ChildWithError />} />
         <Route exact path="/lazy" element={<LazyParent />} />
         <Route exact path="/hoc" element={<ChildWrapper />} />
+        <Route exact path="/formduplicate" element={<FormDuplicate />} />
       </Routes>
     </BrowserRouter>
   );

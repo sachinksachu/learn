@@ -2,18 +2,18 @@ import {useState} from "react";
 
 const useCustomForm = (initalValues) =>{
     console.log("initalValues",initalValues);
-    const [fields, setFields] = useState(initalValues)
+    const [inputs, setInputs] = useState(initalValues)
 
     const handleFieldChange = (event) =>{
 
         event.preventDefault();
         
-        const {name, value} = event.target;
-
-        setFields({...fields, [name]: value})
+        const {name, value, id} = event.target;
+        const newInput = {...inputs, [id]:{...inputs[id], [name]: value}}
+        setInputs(newInput)
 
     }
 
-    return [fields, handleFieldChange]
+    return [inputs, handleFieldChange]
 }
 export default useCustomForm;
