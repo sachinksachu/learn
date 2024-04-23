@@ -1,8 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef} from 'react';
+import { useLocation} from 'react-router-dom';
 
 function Stopwatch() {
   const [timer, setTimer] = useState(0);
   const timerRef = useRef(null);
+  const location = useLocation();
+  console.log(location)
 
 function startTimer(){
 

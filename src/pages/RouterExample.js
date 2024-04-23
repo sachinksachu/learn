@@ -10,15 +10,27 @@ function RouterExample() {
 
     //access to current location object
     const location = useLocation();
+    const {from, to} = location.state;
+    const path = location.pathname;
+    const queryParam = location.search;
     console.log(location)
     return (
         <>
             <div>
-                Product Id : {productid}
-                Id : {id}
+                <h3>useParams()</h3>
+                <p>Product Id : {productid}</p>
+                <p>Id : {id}</p>
             </div>
+
             <div>
-                <button type="button" onClick={() => navigate('/stopwatch')}>Stopwatch</button>
+                <h3>useLocation()</h3>
+                <p>State passed: 1:{from} 2:{to}</p>
+                <p>Current path : {path}</p>
+                <p>Query param : {queryParam}</p>
+            </div>
+
+            <div>
+                <button type="button" onClick={() => navigate('/stopwatch', {state: "sd"})}>Stopwatch</button>
             </div>
         </>
     )

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function Default() {
 
