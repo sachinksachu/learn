@@ -10,9 +10,9 @@ function RouterExample() {
 
     //access to current location object
     const location = useLocation();
-    const {from, to} = location.state;
-    const path = location.pathname;
-    const queryParam = location.search;
+    const {from, to} = location ?? location.state;
+    const path = location?.pathname;
+    const queryParam = location?.search;
     console.log(location)
     return (
         <>

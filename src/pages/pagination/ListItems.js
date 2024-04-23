@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getList } from '../../redux/productslice';
+import { getList, clear } from '../../redux/productslice';
 
 function ListItems() {
     const [list, setList] = useState(null);
@@ -13,13 +13,13 @@ function ListItems() {
 
     //Trigger once after initial DOM rendering
     useEffect(() => {
-        dispatch(getList())
+        dispatch(getList(10))
     }, [])
 
     useEffect(() => {
-        if (listData?.data?.length) {
-            setList(listData.data);
+        if (listData?.data.length) {
         }
+        setList(listData.data);
     }, [listData]);
 
     const sortUsers = (field) => {
@@ -40,10 +40,13 @@ function ListItems() {
         setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc'); // Toggle sort order
       };
     
+      const clearList = () =>{
+        dispatch(clear())
+      }
 
     return (
         <div>
-            {listData?.error ? "true" : "fasle"}
+            <button onClick={() =>clearList()}>Clear</button>
             <table>
       <thead>
         <tr>
