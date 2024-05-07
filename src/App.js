@@ -14,6 +14,7 @@ import ChildWithError from './pages/error/ChildWithError';
 import LazyParent from './pages/lazy/LazyParent';
 import ChildWrapper from './pages/hoc/childWrapper';
 import FormDuplicate from './pages/form/formDuplicate/FormDuplicate';
+import Drag from './pages/drag/Drag';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route exact path="/lazy" element={<LazyParent />} />
         <Route exact path="/hoc" element={<ChildWrapper />} />
         <Route exact path="/formduplicate" element={<FormDuplicate />} />
+        <Route exact path="/drag" element={<Drag />} />
       </Routes>
     </BrowserRouter>
   );
