@@ -15,25 +15,29 @@ import LazyParent from './pages/lazy/LazyParent';
 import ChildWrapper from './pages/hoc/childWrapper';
 import FormDuplicate from './pages/form/formDuplicate/FormDuplicate';
 import Drag from './pages/drag/Drag';
+import MainLayout from './pages/coreui/MainLayout';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/route" element={<Default />} />
-        <Route exact path="/:productid?/:id?" element={<RouterExample />} />
-        <Route exact path="/currency" element={<CurrencyConverter />} />
-        <Route exact path="/stopwatch" element={<Stopwatch />} />
-        <Route exact path="/theme" element={<ContextProvider />} />
-        <Route exact path="/form" element={<Form />} />
-        <Route exact path="/products" element={<ListItems />} />
-        <Route exact path="/productform" element={<ProductForm />} />
-        <Route exact path="/parentform" element={<ParentForm />} />
-        <Route exact path="/errorhandling" element={<ChildWithError />} />
-        <Route exact path="/lazy" element={<LazyParent />} />
-        <Route exact path="/hoc" element={<ChildWrapper />} />
-        <Route exact path="/formduplicate" element={<FormDuplicate />} />
-        <Route exact path="/drag" element={<Drag />} />
+        <Route path="/" element={<MainLayout/>}>
+
+          <Route index element={<Stopwatch />} />
+          <Route exact path="/productid/:id?" element={<RouterExample />} />
+          <Route exact path="/currency" element={<CurrencyConverter />} />
+          <Route exact path="/theme" element={<ContextProvider />} />
+          <Route exact path="/form" element={<Form />} />
+          <Route exact path="/products" element={<ListItems />} />
+          <Route exact path="/productform" element={<ProductForm />} />
+          <Route exact path="/parentform" element={<ParentForm />} />
+          <Route exact path="/errorhandling" element={<ChildWithError />} />
+          <Route exact path="/lazy" element={<LazyParent />} />
+          <Route exact path="/hoc" element={<ChildWrapper />} />
+          <Route exact path="/formduplicate" element={<FormDuplicate />} />
+          <Route exact path="/drag" element={<Drag />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
