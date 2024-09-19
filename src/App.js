@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import CurrencyConverter from './pages/CurrecnyConverter'; // Assuming correct import path
 import Stopwatch from './pages/Stopwatch';
@@ -66,7 +66,7 @@ function App() {
   // }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route exact path="/route" element={<Default />} />
         <Route path="/" element={<MainLayout/>}>
@@ -86,7 +86,7 @@ function App() {
           <Route exact path="/drag" element={<Drag />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
