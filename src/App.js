@@ -17,7 +17,6 @@ import ChildWrapper from './pages/hoc/childWrapper';
 import FormDuplicate from './pages/form/formDuplicate/FormDuplicate';
 import Drag from './pages/drag/Drag';
 import MainLayout from './pages/coreui/MainLayout';
-import VideoOverlay from './pages/ar/VideoOverlay';
 
 function App() {
   //20mb glb
@@ -86,7 +85,6 @@ function App() {
           <Route exact path="/formduplicate" element={<FormDuplicate />} />
           <Route exact path="/drag" element={<Drag />} />
         </Route>
-          <Route exact path="/video" element={<VideoOverlay />} />
       </Routes>
     </BrowserRouter>
   );
