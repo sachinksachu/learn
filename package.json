@@ -1,6 +1,7 @@
 {
   "name": "learn",
   "version": "0.1.0",
+  "homepage": "https://sachinksachu.github.io/learn/#",
   "private": true,
   "dependencies": {
     "@coreui/coreui": "^5.0.2",
